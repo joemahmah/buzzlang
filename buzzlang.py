@@ -15,6 +15,8 @@ def replaceContents(file):
 	file_new = deque()
 
 	for line in file:
+
+		#Keywords
 		line = line.replace("#in case of","#if")
 		line = line.replace("#however, in case of","#elif")
 		line = line.replace("#otherwise","#else")
@@ -79,13 +81,33 @@ def replaceContents(file):
 		line = line.replace("effervescent","volatile")
 		line = line.replace("throughout the epoch during which","while")
 
+		#Operators
+		line = line.replace("performs addition with","+")
+		line = line.replace("increments by one","++")
+		line = line.replace("increments by","+=")
+		line = line.replace("performs subtraction with","-")
+		line = line.replace("decrements by one","--")
+		line = line.replace("decrements by","-=")
+		line = line.replace("performs multiplication with","*")
+		line = line.replace("performs division with","/")
+		line = line.replace("performs mod with","%")
+		line = line.replace("is defined by","=")
+		line = line.replace("is not equivalant to","!=")
+		line = line.replace("is not","!")
+		line = line.replace("is equivalant to ","==")
+		line = line.replace("is greater than or equal to",">=")
+		line = line.replace("is greater than",">")
+		line = line.replace("is less than or equal to","<=")
+		line = line.replace("is less than","<")
+		line = line.replace("is funneled into by","<<")
+		line = line.replace("funnels into",">>")
+
+		#Extras
 		line = line.replace("Let there be light.","#include <iostream>\n#include <string>")
 		line = line.replace("And that's all I have to say about that.","return 0;\n}")
 		line = line.replace("Let us begin.","int main(int argc, char** argv){")
 		line = line.replace("Verbalize","cout <<")
 		line = line.replace("Hearken","cin >>")
-		line = line.replace("and also verbalize","<<")
-		line = line.replace("and also hearken",">>")
 		line = line.replace("orthodox.","std;")
 		line = line.replace("and read next line."," << endl;")
 
