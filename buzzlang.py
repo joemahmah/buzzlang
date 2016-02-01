@@ -26,6 +26,7 @@ def replaceContents(file):
 		line = line.replace("#prescribe","#define")
 		line = line.replace("#unprescribe","#undef")
 		line = line.replace("#I want","#include")
+		line = line.replace("##","#include")
 
 		#Keywords
 		line = line.replace("clambake","asm")
