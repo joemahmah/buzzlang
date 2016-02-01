@@ -16,7 +16,7 @@ def replaceContents(file):
 
 	for line in file:
 
-		#Keywords
+		#Preprocessor
 		line = line.replace("#in case of","#if")
 		line = line.replace("#however, in case of","#elif")
 		line = line.replace("#otherwise","#else")
@@ -26,6 +26,8 @@ def replaceContents(file):
 		line = line.replace("#prescribe","#define")
 		line = line.replace("#unprescribe","#undef")
 		line = line.replace("#I want","#include")
+
+		#Keywords
 		line = line.replace("clambake","asm")
 		line = line.replace("what is","auto")
 		line = line.replace("referendum","bool")
@@ -85,20 +87,51 @@ def replaceContents(file):
 		line = line.replace("performs addition with","+")
 		line = line.replace("increments by one","++")
 		line = line.replace("increments by","+=")
+
 		line = line.replace("performs subtraction with","-")
 		line = line.replace("decrements by one","--")
 		line = line.replace("decrements by","-=")
+
+		line = line.replace("is defined by the following:","{")
+		line = line.replace("takes the following parameters:","(")
+		line = line.replace("the following:","(")
+		line = line.replace("firstly,","(")
+		line = line.replace("report:","(")
+		line = line.replace("next,","(")
+		line = line.replace("lastly,","(")
+		line = line.replace("then,",")")
+		line = line.replace("; it",")")
+		line = line.replace("then do:","){")
+		line = line.replace("do:","{")
+		line = line.replace("end definition","}")
+
+		line = line.replace("the pointer of","*")
+		line = line.replace("pointer","*")
+		line = line.replace("the value at the memory location defined by","*")
+		line = line.replace("the memory location of", "&")
+
 		line = line.replace("performs multiplication with","*")
 		line = line.replace("performs division with","/")
 		line = line.replace("performs mod with","%")
+
 		line = line.replace("is defined by","=")
+		line = line.replace("check if it is not equivalant to","!=")
 		line = line.replace("is not equivalant to","!=")
 		line = line.replace("is not","!")
+		line = line.replace("the reverse value of","!")
+		line = line.replace("check if it is equivalant to ","==")
 		line = line.replace("is equivalant to ","==")
+		line = line.replace("is defined as ","==")
+		line = line.replace("check if it is greater than or equal to",">=")
 		line = line.replace("is greater than or equal to",">=")
+		line = line.replace("check if it is greater than",">")
 		line = line.replace("is greater than",">")
+		line = line.replace("check if it is less than or equal to","<=")
 		line = line.replace("is less than or equal to","<=")
+		line = line.replace("check if it is less than","<")
 		line = line.replace("is less than","<")
+
+		line = line.replace("which is funneled into by","<<")
 		line = line.replace("is funneled into by","<<")
 		line = line.replace("funnels into",">>")
 
@@ -106,10 +139,13 @@ def replaceContents(file):
 		line = line.replace("Let there be light.","#include <iostream>\n#include <string>")
 		line = line.replace("And that's all I have to say about that.","return 0;\n}")
 		line = line.replace("Let us begin.","int main(int argc, char** argv){")
+
+		line = line.replace("orthodox.","std;")
+		line = line.replace("word","string")
+
 		line = line.replace("Verbalize","cout <<")
 		line = line.replace("Hearken","cin >>")
-		line = line.replace("orthodox.","std;")
-		line = line.replace("and read next line."," << endl;")
+		line = line.replace("and print next line."," << endl;")
 
 		file_new.append(line)
 
